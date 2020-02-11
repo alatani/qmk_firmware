@@ -51,57 +51,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Shift|   Z  |   X  |   C  |   V  |   B  |             |   N  |   M  |  ,<  |  .>  |  /?  | Shift|
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * | Gui  | Esc  | Alt  | EISU |LOWER |Space |             | Enter| RAISE| KANA |Adjust|      |   |
+   * | Gui  | Esc  | Alt  | EISU |LOWER |Space |             | Enter| RAISE| KANA |      | Adjust| Esc  |
    * `-----------------------------------------'             `-----------------------------------------'
    */
 [_QWERTY] = LAYOUT_ortho_4x12(
       KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, \
       KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, JP_COLN, \
       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, \
-      KC_LGUI, KC_ESC,  KC_LALT, EISU,   LOWER,   KC_SPC,                   KC_ENT,   RAISE,    KANA,    ADJUST,  _______,  _______  \
+      KC_LGUI, KC_ESC,  KC_LALT, EISU,   LOWER,   KC_SPC,                   KC_ENT,   RAISE,    KANA,    _______, ADJUT,  KC_ESC \
       ),
-
-
-  /* Lower JIS Normal
-   * ,-----------------------------------------.             ,-----------------------------------------.
-   * |      |      |      |      |      |      |             |      |      |      |  -=  |  ^~  |  \|  |
-   * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * |      |      |      |      |      |      |             |      |      |      |      |  @`  |  [{  |
-   * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * |      |      |      |      |      |      |             |      |      |      |  ;+  |  :*  |  ]}  |
-   * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-   * |      |      |      |      |      |      |      |      |      |      |  ,<  |  .>  |  /?  |  \_  |
-   * |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-   * |      |      |      |      |      |      | Del  |      |      |      |      |      |      |      |
-   * `-------------------------------------------------------------------------------------------------'
-   */
-  /*
-  [_LOWER] = LAYOUT( \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, KC_MINS, JP_CIRC, JP_YEN,  \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, JP_AT,   JP_LBRC, \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, KC_SCLN, JP_COLN, JP_RBRC, \
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_COMM, KC_DOT,  KC_SLSH, JP_BSLS, \
-    _______, _______, _______, _______, XXXXXXX, XXXXXXX, KC_DEL,  _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX  \
-    ),
-    */
 
   /* Lower
    * ,-----------------------------------------.             ,-----------------------------------------.
    * | Tab  |   !  |   "  |   #  |   $  |   %  |             |   &  |   '  |   (  |   )  |  ^~  |  \|  |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * |      |      |      |      |      |      |             |      | PgUp |      |  @`  |  [{  |      |
+   * |      |      |      |      |      |      |             |      |      | PgUp |  @`  |  [{  |      |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * |      |      |      |      |      |      |             | Home |PgDown| End  |      |  ]}  |  \_  |
+   * |      |      |      |      |      |      |             |      | Home |PgDown| End  |  ]}  |  \_  |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * |      |      |      |      |      |      |             |      |      |      |      |      |      |
    * `-----------------------------------------'             `-----------------------------------------'
    */
   [_LOWER] = LAYOUT_ortho_4x12( \
-      KC_ESC, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_AMPR, KKC_QUOT, KC_LPRN, KC_RPRN, JP_CIRC, JP_YEN, \
-      _______, _______, _______, _______, _______, _______,                  _______, KC_PGUP, _______,   JP_AT, JP_LBRC, KC_PIPE, \
-      _______, _______, _______, _______, _______, _______,                  KC_HOME, KC_PGDN, KC_END,  _______, JP_RBRC, JP_BSLS, \
+      KC_ESC, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                   KC_AMPR, KC_QUOT, KC_LPRN, KC_RPRN, JP_CIRC, JP_YEN, \
+      _______, _______, _______, _______, _______, _______,                  _______, _______, KC_PGUP,   JP_AT, JP_LBRC, KC_PIPE, \
+      _______, _______, _______, _______, _______, _______,                  _______, KC_HOME, KC_PGDN,  KC_END, JP_RBRC, JP_BSLS, \
       _______, _______, _______, _______, _______, _______,                  _______, _______, _______, _______, _______, _______ \
             ),
+  
 
   /* Raise
    * ,-----------------------------------------.             ,-----------------------------------------.
@@ -125,17 +102,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
    * ,-----------------------------------------.             ,-----------------------------------------.
    * |      | Reset|RGBRST|Aud on|Audoff|      |             |      |      |      |      |      | Ins  |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * |      |RGB ON| HUE+ | SAT+ | VAL+ | Mac  |             | Win  |  Up  |      |Print |ScLock|Pause |
+   * |      |RGB ON| HUE+ | SAT+ | VAL+ | Mac  |             | Win  |      |  Up  |Print |ScLock|Pause |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * |MODE R| MODE | HUE- | SAT- | VAL- |      |             | Left | Down | Right|      |      |      |
+   * |MODE R| MODE | HUE- | SAT- | VAL- |      |             |      | Left | Down | Right|      |      |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * |      |      |      |      |      |      |             |      |      |      |      |      |      |
    * `-----------------------------------------'             `-----------------------------------------'
    */
     [_ADJUST] =  LAYOUT_ortho_4x12( \
       _______, RESET,   RGBRST,  _______, _______, _______,                   _______, _______, _______, _______,  _______, KC_INS, \
-      _______, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, AG_NORM,                   AG_SWAP, KC_UP,   _______,  KC_PSCR, KC_SLCK, KC_PAUS,\
-      RGB_RMOD,RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, _______,                   KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______,\
+      _______, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, AG_NORM,                   AG_SWAP, _______,   KC_UP, KC_PSCR, KC_SLCK, KC_PAUS,\
+      RGB_RMOD,RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, _______,                   _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,\
       _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______ \
       )
 };
